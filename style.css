@@ -109,20 +109,20 @@ dfn {
 }
 
 h1 {
-	font-size: 2.44em;
+	font-size: 3.998em;
 	margin: 0.67em 0;
 }
 
 h2 {
-	font-size: 1.95em;
+	font-size: 2.827em;
 }
 
 h3 {
-	font-size: 1.56em;
+	font-size: 1.999em;
 }
 
 h4 {
-	font-size: 1.25em;
+	font-size: 1.414em;
 }
 
 h5 {
@@ -130,7 +130,7 @@ h5 {
 }
 
 h6 {
-	font-size: 0.8em;
+	font-size: 0.707em;
 }
 
 mark {
@@ -296,6 +296,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Playfair Display', serif;
 }
 
+p {
+	margin-bottom: 1.5em;
+}
+
 .entry-header h1.entry-title {
 	font-size: 2.44em;
 	line-height: 1.4;
@@ -307,7 +311,10 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
 	font-style: italic;
 }
 
@@ -320,7 +327,6 @@ address {
 }
 
 pre {
-	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -331,19 +337,25 @@ pre {
 	padding: 1.6em;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
 
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
-mark, ins {
-	background: #fff9c0;
+mark,
+ins {
+	background: #ff7a6b;
+	color: #1c214b;
 	text-decoration: none;
 }
 
@@ -351,12 +363,19 @@ big {
 	font-size: 125%;
 }
 
+.site-header {
+	align-items: center;
+	border-bottom: 1px solid #a6d8ef;
+	display: flex;
+	justify-content: space-between;
+}
+
 .archive .site-header {
 	margin-bottom: 3.5em;
 }
 
 .site-title {
-	margin: .4375em 0 0;
+	margin: 0;
 	font-size: 38px;
 	font-weight: bold;
 	line-height: 1.2;
@@ -365,10 +384,6 @@ big {
 .site-title a {
 	color: #fff;
 	text-decoration: none;
-}
-
-.site-branding {
-	margin-bottom: 1.75em;
 }
 
 .site-description {
@@ -458,15 +473,15 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	color: #1c214b;
+	padding: 0.8rem 2rem;
+	background-color: #ff7a6b;
+	border: none;
 	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1;
-	padding: .6em 1em .4em;
+	font-size: 100%;
+	font-weight: 400;
+	text-transform: uppercase;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
 button:hover,
@@ -567,9 +582,8 @@ a:hover, a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	margin: 0 auto;
-	max-width: 636px;
-	text-align: center;
+	max-width: 100%;
+	margin: 0 2rem;
 }
 
 .main-navigation ul {
@@ -622,38 +636,13 @@ a:hover, a:active {
 	padding: 1em;
 }
 
-@media screen and (max-width: 37.5em) {
-	/* Small menu. */
-	.menu-toggle,
-	.main-navigation.toggled ul {
-		display: block;
-		margin: 0 auto;
-	}
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.main-navigation a {
-		padding: 0 .5em;
-	}
-}
-
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
 	border-bottom: 1px solid #111;
-	margin: 0 auto 60px;
-	max-width: 636px;
 	overflow: hidden;
-	padding-bottom: 60px;
+	position: relative;
+	padding: 1em 2em;
 }
 
 .nav-links {
@@ -672,6 +661,51 @@ a:hover, a:active {
 .post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
+}
+
+@media screen and (max-width: 1100px) {
+	/* Small menu. */
+	.menu-toggle,
+	.main-navigation.toggled ul {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 740px) {
+
+	.site-main .comment-navigation,
+	.site-main .posts-navigation,
+	.site-main .post-navigation {
+		left: 20%;
+		max-width: calc(80% - 2rem);
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+	}
+}
+
+@media screen and (min-width: 1100px) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.main-navigation a {
+		padding: 0 .5em;
+	}
+
+	.site-main .comment-navigation,
+	.site-main .posts-navigation,
+	.site-main .post-navigation {
+		left: 330px;
+		max-width: 770px;
+		overflow: hidden;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -718,17 +752,20 @@ a:hover, a:active {
 # Alignments
 --------------------------------------------------------------*/
 
+.alignleft {
+	display: inline;
+	float: left;
+}
+
 .alignleft,
 .alignright {
-	max-width: 636px !important;	/* Let's work to make this !important unnecessary */
 }
 
 .alignleft img,
 .alignright img,
 .alignleft figcaption,
 .alignright figcaption {
-	max-width: 50%;
-	width: 50%;
+	max-width: 100%;
 }
 
 .alignleft figcaption {
@@ -758,6 +795,17 @@ a:hover, a:active {
 	margin-right: auto;
 }
 
+img.alignleft {
+	margin-right: 1.5em;
+	margin-bottom: .5em;
+}
+
+@media screen and (min-width: 1100px) {
+	.alignleft,
+	.alignright {
+		max-width: 770px !important;	/* Let's work to make this !important unnecessary */
+	}
+}
 
 /*--------------------------------------------------------------
 # Widgets
@@ -785,12 +833,18 @@ a:hover, a:active {
 
 .site-branding {
 	text-align: center;
-	margin: 60px 0;
+	margin: 60px 2rem;
 }
 
 .site-footer {
 	margin: 1em 0;
 	opacity: 0.5;
+}
+
+@media screen and (min-width: 1100px) {
+	.site-branding {
+		margin: 1em 2em;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -801,17 +855,12 @@ a:hover, a:active {
 }
 
 .hentry {
-	margin: 60px 0;
+	margin: 0;
+	position: relative;
 }
 
 .updated:not(.published) {
 	display: none;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
 }
 
 .page-links {
@@ -825,10 +874,8 @@ a:hover, a:active {
 .post-navigation,
 .page-navigation,
 .comments-area {
-	margin: 1.5em auto;
-	padding-left: 14px;
-	padding-right: 14px;
-	max-width: 636px;
+	padding: 0 2rem;
+	position: relative;
 }
 
 .entry-footer span{
@@ -842,15 +889,33 @@ a:hover, a:active {
 	border-bottom: 1px solid #111;
 }
 
-@media screen and (min-width: 664px) {
+@media screen and (min-width: 740px) {
 	.entry-header,
 	.entry-footer,
 	.site-info,
 	.post-navigation,
 	.page-navigation,
 	.comments-area {
+		left: 20%;
+		max-width: calc(80% - 2rem);
 		padding-left: 0;
 		padding-right: 0;
+		position: relative;
+	}
+}
+
+@media screen and (min-width: 1100px) {
+	.entry-header,
+	.entry-footer,
+	.site-info,
+	.post-navigation,
+	.page-navigation,
+	.comments-area {
+		left: 330px;
+		max-width: 770px;
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
 	}
 }
 
