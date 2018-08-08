@@ -133,7 +133,12 @@ h6 {
 	font-size: 0.707em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	line-height: 1.2;
 }
 
@@ -171,7 +176,7 @@ svg:not(:root) {
 }
 
 figure {
-	margin: 1em 40px;
+	margin: 1em 0;
 }
 
 hr {
@@ -296,7 +301,22 @@ textarea {
 	line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+body *::selection {
+	background: #ff7a6b;
+	color: #1c214b;
+}
+
+body *::-moz-selection {
+	background: #ff7a6b;
+	color: #1c214b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: #fff;
 	clear: both;
 	font-family: 'Playfair Display', serif;
@@ -307,9 +327,13 @@ p {
 }
 
 .entry-header h1.entry-title {
-	font-size: 2.44em;
-	line-height: 1.4;
-	margin: 1em 0;
+	font-size: 3.998em;
+	line-height: 1.2;
+	margin: 0.67em 0;
+}
+
+.entry-header .entry-title {
+	margin: 1.5em 0 1em;
 }
 
 .entry-header .entry-title a {
@@ -479,7 +503,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	color: #1c214b;
+	color: #000000;
 	padding: 0.8rem 2rem;
 	background-color: #ff7a6b;
 	border: none;
@@ -630,10 +654,17 @@ a:hover, a:active {
 }
 
 .main-navigation li {
+	font-size: 0.778em;
 	position: relative;
+	text-transform: uppercase;
+}
+
+.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a, .main-navigation .current-menu-ancestor > a {
+	color: #ff7a6b;
 }
 
 .main-navigation a {
+	color: #a6d8ef;
 	display: block;
 	text-decoration: none;
 }
@@ -645,14 +676,19 @@ a:hover, a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-	border-bottom: 1px solid #111;
-	overflow: hidden;
-	position: relative;
-	padding: 1em 2em;
+	margin: 0 0 2em;
+	width: 100%;
 }
 
 .nav-links {
 	display: flex;
+}
+
+.comment-navigation .nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+	padding: 0;
+	margin: 1em 0;
 }
 
 .comment-navigation .nav-previous,
@@ -702,7 +738,7 @@ a:hover, a:active {
 	}
 
 	.main-navigation a {
-		padding: 0 .5em;
+		padding: 0 1em;
 	}
 
 	.site-main .comment-navigation,
@@ -761,10 +797,13 @@ a:hover, a:active {
 .alignleft {
 	display: inline;
 	float: left;
+	margin-right: 1.5em;
 }
 
-.alignleft,
 .alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
 }
 
 .alignleft img,
@@ -842,11 +881,30 @@ img.alignleft {
 	margin: 60px 2rem;
 }
 
-.site-footer {
-	margin: 1em 0;
+.entry-content > :first-child,
+.page-content > :first-child {
+	margin-top: 0;
+}
+
+.entry-content ul,
+.entry-content ol {
+	list-style-position: outside;
+	margin: 0 0 0 2rem;
+	padding: 0;
+}
+
+.entry-content ul ul {
+	list-style-type: circle;
+}
+
+.site-info {
+	margin: 2rem 0;
+	max-width: 1100px;
+	padding: 0 1rem;
 }
 
 @media screen and (min-width: 1100px) {
+
 	.site-branding {
 		margin: 1em 2em;
 	}
@@ -883,11 +941,15 @@ img.alignleft {
 	position: relative;
 }
 
+.entry-meta {
+	margin: 1em 0;
+}
+
 .entry-footer {
 	color: #a6d8ef;
 	font-size: 90%;
 	padding-bottom: 40px;
-	border-bottom: 1px solid #111;
+	border: 0;
 }
 
 .entry-footer span {
@@ -957,6 +1019,46 @@ img.alignleft {
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
+
+.wp-block-image,
+.blocks-gallery-item figure {
+	background-color: #ff7a6b;
+	display:          flex;
+	flex:             1 1 100%;
+	height:           100%;
+	overflow:         hidden;
+	padding:          0px;
+	position:         relative;
+}
+
+.wp-block-image img,
+.blocks-gallery-item figure img {
+	filter:         grayscale(100%) contrast(1) blur(0px);
+	flex:           1 0 100%;
+	height:         100%;
+	max-width:      100%;
+	mix-blend-mode: luminosity;
+	object-fit:     cover;
+	opacity:        1;
+	position:       relative;
+	width:          100%;
+}
+
+.wp-block-image:before,
+.blocks-gallery-item figure:before {
+	background-color: #1c214b;
+	bottom:         0;
+	content:        '';
+	height:         100%;
+	left:           0;
+	mix-blend-mode: lighten;
+	position:       absolute;
+	right:          0;
+	top:            0;
+	width:          100%;
+	z-index:        1;
+}
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
