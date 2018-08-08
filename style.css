@@ -110,7 +110,7 @@ dfn {
 
 h1 {
 	font-size: 3.998em;
-	margin: 0.67em 0;
+	margin: 0.67em 0 0;
 }
 
 h2 {
@@ -942,7 +942,7 @@ img.alignleft {
 }
 
 .entry-meta {
-	margin: 1em 0;
+	margin: 0 0 1em;
 }
 
 .entry-footer {
@@ -999,6 +999,48 @@ img.alignleft {
 
 .bypostauthor {
 	display: block;
+}
+
+.comment-reply-link {
+	color: #000000;
+	padding: 0.4rem 1rem;
+	background-color: #ff7a6b;
+	border: none;
+	border-radius: 3px;
+	display: inline-block;
+	font-size: 0.707em;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.comment-reply-link:hover,
+.comment-reply-link:focus,
+.comment-reply-link:active {
+	color: #000000;
+}
+
+#comments li {
+	margin: 0 0 2rem;
+}
+
+#comments ol {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#comments .children {
+	margin-left: 3rem;
+	margin-top: 2rem;
+}
+
+.comment-metadata {
+	font-size: 0.889em;
+}
+
+.comment-edit-link {
+	margin-left: 1em;
 }
 
 /*--------------------------------------------------------------

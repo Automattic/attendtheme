@@ -134,6 +134,41 @@
 	padding: 1.5em 14px;
 }
 
+.wp-block-cover-image .wp-block-cover-image-text,
+.wp-block-cover-image h2 {
+	font-family: 'Playfair Display', serif;
+}
+
+.wp-block-cover-image.has-background-dim::before,
+.wp-block-cover-image.has-background-dim::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*
+
+Not sure if need to modify the markup of the block to include an extra container element for the duotone to work correctly.
+
+.wp-block-cover-image.has-background-dim {
+	background-color: #ff7a6b;
+}
+
+.wp-block-cover-image.has-background-dim:after {
+	filter:         grayscale(100%) contrast(1) blur(0px);
+	mix-blend-mode: luminosity;
+}
+
+.wp-block-cover-image.has-background-dim:before {
+	background-color: #1c214b;
+	mix-blend-mode: lighten;
+}
+*/
+
 ul.wp-block-latest-posts.alignwide,
 ul.wp-block-latest-posts.alignfull,
 ul.wp-block-latest-posts.is-grid.alignwide,
@@ -177,14 +212,23 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	margin: 2rem 0;
 }
 
-.wp-block-pullquote cite,
-.wp-block-pullquote footer {
-	text-transform: none;
-	font-size: 1em;
-	font-style: normal;
+.wp-block-pullquote {
+	border-top: 4px solid #ff7a6b;
+	border-bottom: 4px solid #ff7a6b;
+	color: #a6d8ef;
 }
 
-.wp-block-pullquote,
+.wp-block-quote cite,
+.wp-block-pullquote cite {
+	display: block;
+	font-size: 0.778em;
+	font-style: normal;
+	line-height: 1.056em;
+	margin: 0;
+	padding-top: 1rem;
+	text-transform: none;
+}
+
 .wp-block-pullquote cite,
 .wp-block-pullquote footer {
 	border: 0;
@@ -205,12 +249,22 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .wp-block-pullquote > p {
-	font-size: 1em;
+	font-size: 1.333em;
 	line-height: 1.6;
 }
 
 .wp-block-pullquote>p:first-child {
 	margin-top: 0;
+}
+
+.wp-block-quote > *,
+.wp-block-quote p,
+.wp-block-pullquote > *,
+.wp-block-pullquote p {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-style: normal;
+    margin: 0;
 }
 
 .wp-block-separator {

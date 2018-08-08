@@ -185,6 +185,11 @@ function attend_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Icons
+	wp_localize_script( 'attend-navigation', 'attendIcons', array(
+		'dropdown' => attend_get_svg( array( 'icon' => 'expand' ) )
+	) );
 }
 add_action( 'wp_enqueue_scripts', 'attend_scripts' );
 
@@ -207,6 +212,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * SVG icons functions and filters.
+ */
+require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 /**
  * Load Jetpack compatibility file.
