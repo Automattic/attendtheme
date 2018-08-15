@@ -202,6 +202,14 @@ function attend_scripts() {
 add_action( 'wp_enqueue_scripts', 'attend_scripts' );
 
 /**
+ * Check whether the browser supports JavaScript
+ */
+function attend_html_js_class() {
+	echo '<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>'. "\n";
+}
+add_action( 'wp_head', 'attend_html_js_class', 1 );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -232,3 +240,6 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+// Add Custom Blocks
+require get_template_directory() . '/inc/blocks.php';

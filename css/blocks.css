@@ -120,7 +120,7 @@
 .wp-block-image figcaption {
 	background: #1c214b;
 	color: #a6d8ef;
-	font-size: 0.707em;
+	font-size: 0.778em;
 	margin: 0;
 	padding-top: 2em;
 	text-align: center;
@@ -310,7 +310,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1136px) {
 
 	.entry-content,
 	.page-content {
