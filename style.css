@@ -303,7 +303,7 @@ textarea {
 }
 
 body *::selection {
-	background: #ff7a6b;
+	background: rgba(255, 122, 107, 0.996);
 	color: #1c214b;
 }
 
