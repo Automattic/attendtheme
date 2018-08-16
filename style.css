@@ -614,15 +614,15 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 
 .site-header-wrap {
-	display: flex;
-	max-width: 1100px;
-	margin: 0 auto;
-	padding: 0 1rem;
+	padding: 0;
+	width: 100%;
 }
 
-.site-header-wrap .main-navigation {
-	flex: 1;
-	align-self: flex-end;
+.site-branding {
+	margin: 1rem 1rem 1rem 0;
+	width: auto;
+	float: left;
+	display: inline-block;
 }
 
 .js .site-header-wrap .main-navigation {
@@ -636,11 +636,11 @@ a:hover, a:active {
 }
 
 .main-navigation {
-	clear: both;
-	display: block;
-	padding: 1em 0;
-	max-width: 100%;
-	margin: 0 2rem;
+	display: inline-block;
+	float: right;
+	padding: 1rem 0;
+	max-width: 77%;
+	margin: 0 2rem 0 1rem;
 }
 
 .main-navigation > div {
@@ -1083,11 +1083,6 @@ img.alignleft {
 	max-width: 100%;
 }
 
-.site-branding {
-	text-align: center;
-	margin: 60px 2rem;
-}
-
 .entry-content > :first-child,
 .page-content > :first-child {
 	margin-top: 0;
@@ -1117,7 +1112,6 @@ img.alignleft {
 @media screen and (min-width: 1136px) {
 
 	.site-branding {
-		margin: 1em 2em;
 	}
 }
 
