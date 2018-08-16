@@ -19,6 +19,27 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
+/*
+Theme Name: Gutenberg
+Theme URI: https://github.com/WordPress/gutenberg-theme/
+Author: wordpressdotorg
+Author URI: https://wordpress.org
+Description: Showcasing themeing with Gutenberg.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: attend
+Tags: translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+attend is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -1303,12 +1324,21 @@ h2.comments-title {
 	margin: 2.778rem 0;
 }
 
+.comment-content {
+	font-size: 1rem;
+	margin-top: 2rem;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
 
 .comment-form label {
 	display: block;
+}
+
+.comment-form input {
+	max-width: 100%;
 }
 
 .bypostauthor {
@@ -1342,7 +1372,7 @@ h2.comments-title {
 }
 
 #comments .comment-body {
-	margin-left: 3em;
+	margin-left: 3rem;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 }
@@ -1391,10 +1421,10 @@ h2.comments-title {
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 	color: #000000;
 	display: inline-block;
-	font-size: 1rem;
+	font-size: 0.875rem;
 	font-weight: 400;
 	margin-top: 2rem;
-	padding: 0.75rem 1.5rem;
+	padding: 0.5rem 1rem;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -1406,7 +1436,20 @@ h2.comments-title {
 }
 
 #cancel-comment-reply-link {
-	font-size: 1rem;
+	background-color: #ff7a6b;
+	border-radius: 3px;
+	border: none;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+	display: inline-block;
+	margin-top: 2rem;
+	color: #000000;
+	font-size: 0.875rem;
+	font-weight: 400;
+	font-family: 'Lato', sans-serif;
+	padding: 0.5rem 1rem;
+	line-height: 1.4rem;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .comment-form label {
@@ -1419,7 +1462,7 @@ h2.comments-title {
 }
 
 .comment-metadata {
-	font-size: 0.889em;
+	font-size: 0.875rem;
 }
 
 .comment-metadata a {
@@ -1430,7 +1473,7 @@ h2.comments-title {
 	margin-left: 1em;
 }
 
-.comment .comment-meta .comment-author .avatar {
+.comment-meta .comment-author .comment-author-avatar {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1438,17 +1481,21 @@ h2.comments-title {
 	line-height: 1;
 }
 
+.comment-meta a {
+	text-decoration: none;
+}
+
 .comment .comment-meta {
 	position: relative;
 	min-height: 60px;
-	padding-left: 85px;
+	padding-left: 97px;
 	margin-bottom: 1rem;
 }
 
 .form-submit #submit {
-	font-size: 1rem;
-	padding: 0.75rem 1.5rem;
+	font-size: 0.875rem;
 	margin-bottom: 1.5rem;
+	padding: 0.5rem 1rem;
 }
 
 @media screen and (min-width: 740px) {
@@ -1457,31 +1504,46 @@ h2.comments-title {
 		margin-left: calc(-25% - 0.5rem);
 	}
 
+	#comments .comment-body,
+	#comments .comment-list .comment .comment-respond {
+		margin-left: 97px;
+	}
+
 	.comment-content {
-		margin-left: 85px;
+		margin-left: 97px;
+		margin-top: 0;
 	}
 
 	.comment-reply-link {
-		margin-left: 85px;
+		margin-left: 97px;
 	}
 
-	#comments .comment-list .comment.depth-1 > .comment-respond {
-		margin-left: 85px;
+	#cancel-comment-reply-link {
+		float: right;
+		margin-top: 0;
 	}
-
-	#comments ol.children {
-		margin-left: 85px;
-	}
-
-	#comments .comment-list .comment .comment-respond {
-	margin-left: calc(3rem + 85px);
-}
 }
 
 @media screen and (min-width: 1136px) {
 	#comments .comment-list > li.comment:after {
 		padding-left: 1100px;
 		margin-left: -330px;
+	}
+
+	#comments .comment-body {
+		margin-left: 0;
+	}
+
+	#comments .comment-list .comment.depth-1 > .comment-respond {
+		margin-left: 97px;
+	}
+
+	#comments .comment-list .comment .comment-respond {
+		margin-left: 97px;
+	}
+
+	#comments ol.children {
+		margin-left: 97px;
 	}
 }
 
@@ -1505,7 +1567,8 @@ h2.comments-title {
 --------------------------------------------------------------*/
 
 .wp-block-image,
-.blocks-gallery-item figure {
+.blocks-gallery-item figure,
+.comment-meta .comment-author .comment-author-avatar {
 	background-color: #ff7a6b;
 	display:          flex;
 	flex:             1 1 100%;
@@ -1515,8 +1578,15 @@ h2.comments-title {
 	position:         relative;
 }
 
+.comment-meta .comment-author .comment-author-avatar {
+	width: 72px;
+	height: 72px;
+	position: absolute;
+}
+
 .wp-block-image img,
-.blocks-gallery-item figure img {
+.blocks-gallery-item figure img,
+.comment-meta .comment-author .comment-author-avatar img {
 	filter:         grayscale(100%) contrast(1) blur(0px);
 	flex:           1 0 100%;
 	height:         100%;
@@ -1529,7 +1599,8 @@ h2.comments-title {
 }
 
 .wp-block-image:before,
-.blocks-gallery-item figure:before {
+.blocks-gallery-item figure:before,
+.comment-meta .comment-author .comment-author-avatar:before {
 	background-color: #1c214b;
 	bottom:         0;
 	content:        '';
@@ -1621,7 +1692,7 @@ object {
 }
 
 .gallery-columns-7 .gallery-item {
-	max-width: 14.2857142857%;
+	max-width: 14.2977142977%;
 }
 
 .gallery-columns-8 .gallery-item {
