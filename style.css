@@ -435,12 +435,19 @@ html {
 
 body {
 	background: #1c214b;
-	/* Fallback for when there is no custom background color defined. */ }
+	/* Fallback for when there is no custom background color defined. */
+}
 
 blockquote, q {
-	quotes: "" ""; }
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: ""; }
+	quotes: "" "";
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
 
 hr {
 	border: 0;
@@ -1314,28 +1321,15 @@ h2.comments-title {
 	display: block;
 }
 
-.comment-reply-link {
-	color: #000000;
-	padding: 0.4rem 1rem;
-	background-color: #ff7a6b;
-	border: none;
-	border-radius: 3px;
-	display: inline-block;
-	font-size: 0.707em;
-	font-weight: 400;
-	text-decoration: none;
-	text-transform: uppercase;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
-}
-
 .comment-reply-link:hover,
 .comment-reply-link:focus,
-.comment-reply-link:active {
+.comment-reply-link:active,
+.comment-reply-link:visited {
 	color: #000000;
 }
 
-#comments li.comment {
-	padding: 0 0 2rem;
+#comments li.comment.depth-1 {
+/* 	padding: 2rem 0 0; */
 }
 
 #comments .comment-list > li.comment:after {
@@ -1344,35 +1338,98 @@ h2.comments-title {
 	display: block;
 	position: relative;
 	margin-left: -2rem;
-	padding-top: 2rem;
-}
-
-@media screen and (min-width: 740px) {
-	#comments .comment-list > li.comment:after {
-		margin-left: calc(-25% - 0.5rem);
-	}
-}
-
-@media screen and (min-width: 1136px) {
-	#comments .comment-list > li.comment:after {
-		padding-left: 1100px;
-		margin-left: -330px;
-	}
 }
 
 #comments ol {
 	margin-left: 0;
 	padding-left: 0;
+	margin-bottom: 0;
 	list-style: none;
 }
 
-#comments .children {
+#comments .comment-body {
+	margin-left: 3em;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+#comments .comment-list .comment.parent > .comment-body {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+#comments .comment-list .comment.parent.depth-1 > .comment-body {
+	padding-top: 3rem;
+}
+
+#comments .comment-list .comment .comment-respond {
 	margin-left: 3rem;
+}
+
+#comments .comment-list .comment.parent > .comment-respond {
+	padding-bottom: 0;
+}
+
+.comment-respond {
+	margin-top: 3rem;
+}
+
+#comments .comment-list .comment .comment-respond {
+	margin-top: 1.5rem;
+}
+
+#comments .comment-list .comment .comment-body p:last-of-type {
+	margin-bottom: 0;
+}
+
+#comments .comment-list > li:first-of-type .comment-body {
+	padding-top: 0;
+}
+
+#comments .children > li:last-of-type .comment-body {
+	padding-top: 1.5rem;
+}
+
+.comment-reply-link {
+	background-color: #ff7a6b;
+	border-radius: 3px;
+	border: none;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+	color: #000000;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 400;
 	margin-top: 2rem;
+	padding: 0.75rem 1.5rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#reply-title {
+	font-size: 1.414em;
+	line-height: 1;
+	margin-top: 0;
+}
+
+#cancel-comment-reply-link {
+	font-size: 1rem;
+}
+
+.comment-form label {
+	margin-bottom: 1rem;
+}
+
+#comments .comment-list .comment.depth-1 > .comment-body,
+#comments .comment-list .comment.depth-1 > .comment-respond {
+	margin-left: 0;
 }
 
 .comment-metadata {
 	font-size: 0.889em;
+}
+
+.comment-metadata a {
+	color: #a6d8ef;
 }
 
 .comment-edit-link {
@@ -1389,8 +1446,49 @@ h2.comments-title {
 
 .comment .comment-meta {
 	position: relative;
-	min-height: 2rem;
-	padding-left: 4rem;
+	min-height: 60px;
+	padding-left: 85px;
+	margin-bottom: 1rem;
+}
+
+.form-submit #submit {
+	font-size: 1rem;
+	padding: 0.75rem 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 740px) {
+
+	#comments .comment-list > li.comment:after {
+		margin-left: calc(-25% - 0.5rem);
+	}
+
+	.comment-content {
+		margin-left: 85px;
+	}
+
+	.comment-reply-link {
+		margin-left: 85px;
+	}
+
+	#comments .comment-list .comment.depth-1 > .comment-respond {
+		margin-left: 85px;
+	}
+
+	#comments ol.children {
+		margin-left: 85px;
+	}
+
+	#comments .comment-list .comment .comment-respond {
+	margin-left: calc(3rem + 85px);
+}
+}
+
+@media screen and (min-width: 1136px) {
+	#comments .comment-list > li.comment:after {
+		padding-left: 1100px;
+		margin-left: -330px;
+	}
 }
 
 /*--------------------------------------------------------------
