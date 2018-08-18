@@ -98,15 +98,24 @@
 	display: block;
 }
 
+.wp-block-image.alignleft,
+.wp-block-image.alignright {
+	padding: 0;
+	margin: 0 0 2rem 0;
+}
+
 .wp-block-image.alignleft {
     margin-right: 2rem;
 }
 
-.wp-block-image.alignleft,
 .wp-block-image.alignright {
-	padding: 0 0 2rem 0;
-	margin: 0;
+	margin-left: 2rem;
 }
+
+.wp-block-image.alignright img {
+	margin-left: 0;
+}
+
 
 .wp-block-image.alignleft img,
 .wp-block-image.alignright img {

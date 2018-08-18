@@ -640,7 +640,7 @@ a:hover, a:active {
 }
 
 .site-branding {
-	margin: 1rem 1rem 1rem 0;
+	margin: 1rem 1rem 1rem 2rem;
 	width: auto;
 	float: left;
 	display: inline-block;
@@ -659,7 +659,7 @@ a:hover, a:active {
 .main-navigation {
 	display: inline-block;
 	float: right;
-	padding: 1rem 0;
+	padding: 2rem 0;
 	max-width: 77%;
 	margin: 0 2rem 0 1rem;
 }
@@ -1421,10 +1421,10 @@ h2.comments-title {
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 	color: #000000;
 	display: inline-block;
-	font-size: 0.875rem;
+	font-size: 0.750rem;
 	font-weight: 400;
 	margin-top: 2rem;
-	padding: 0.5rem 1rem;
+	padding: 0.4rem 0.8rem;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -1443,11 +1443,11 @@ h2.comments-title {
 	display: inline-block;
 	margin-top: 2rem;
 	color: #000000;
-	font-size: 0.875rem;
+	font-size: 0.750rem;
 	font-weight: 400;
 	font-family: 'Lato', sans-serif;
-	padding: 0.5rem 1rem;
-	line-height: 1.4rem;
+	padding: 0.4rem 0.8rem;
+	line-height: 1.2rem;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -1488,7 +1488,7 @@ h2.comments-title {
 .comment .comment-meta {
 	position: relative;
 	min-height: 60px;
-	padding-left: 97px;
+	padding-left: 85px;
 	margin-bottom: 1rem;
 }
 
@@ -1506,16 +1506,20 @@ h2.comments-title {
 
 	#comments .comment-body,
 	#comments .comment-list .comment .comment-respond {
-		margin-left: 97px;
+		margin-left: 85px;
+	}
+
+	#comments .comment-list .comment.depth-1 > .comment-respond {
+		margin-left: 85px;
 	}
 
 	.comment-content {
-		margin-left: 97px;
+		margin-left: 85px;
 		margin-top: 0;
 	}
 
 	.comment-reply-link {
-		margin-left: 97px;
+		margin-left: 85px;
 	}
 
 	#cancel-comment-reply-link {
@@ -1535,15 +1539,15 @@ h2.comments-title {
 	}
 
 	#comments .comment-list .comment.depth-1 > .comment-respond {
-		margin-left: 97px;
+		margin-left: 85px;
 	}
 
 	#comments .comment-list .comment .comment-respond {
-		margin-left: 97px;
+		margin-left: 85px;
 	}
 
 	#comments ol.children {
-		margin-left: 97px;
+		margin-left: 85px;
 	}
 }
 
@@ -1578,12 +1582,6 @@ h2.comments-title {
 	position:         relative;
 }
 
-.comment-meta .comment-author .comment-author-avatar {
-	width: 72px;
-	height: 72px;
-	position: absolute;
-}
-
 .wp-block-image img,
 .blocks-gallery-item figure img,
 .comment-meta .comment-author .comment-author-avatar img {
@@ -1612,6 +1610,12 @@ h2.comments-title {
 	top:            0;
 	width:          100%;
 	z-index:        1;
+}
+
+.comment-meta .comment-author .comment-author-avatar {
+	width: 60px;
+	height: 60px;
+	position: absolute;
 }
 
 .page-content .wp-smiley,
@@ -1692,7 +1696,7 @@ object {
 }
 
 .gallery-columns-7 .gallery-item {
-	max-width: 14.2977142977%;
+	max-width: 14.2857142857%;
 }
 
 .gallery-columns-8 .gallery-item {
