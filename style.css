@@ -1069,8 +1069,13 @@ a:hover, a:active {
 }
 
 img.alignleft {
-	margin-right: 1.5em;
-	margin-bottom: .5em;
+	margin-right: 2em;
+	margin-bottom: 1em;
+}
+
+img.alignright {
+	margin-left: 2rem;
+	margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 1136px) {
@@ -1582,7 +1587,7 @@ h2.comments-title {
 }
 
 .wp-block-image img,
-.wp-block-cover-image-wrapper .has-background-dim,
+.wp-block-cover-image-wrapper .wp-block-cover-image,
 .blocks-gallery-item figure img,
 .comment-meta .comment-author .comment-author-avatar img {
 	filter:         grayscale(100%) contrast(1) blur(0px);

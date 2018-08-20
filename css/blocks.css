@@ -17,14 +17,19 @@
 	left: 0;
 }
 
-.entry-content > .alignfull {
+.entry-content > .alignfull,
+.page-content > .alignfull,
+.entry-content > .wp-block-cover-image-wrapper,
+.page-content > .wp-block-cover-image-wrapper {
 	width: 100vw;
 	max-width: 100vw;
 	padding: 0;
 }
 
 .entry-content > .alignfull,
-.page-content > .alignfull {
+.page-content > .alignfull,
+.entry-content > .wp-block-cover-image-wrapper,
+.page-content > .wp-block-cover-image-wrapper {
 	left: -2rem;
 }
 
@@ -156,12 +161,8 @@
 	font-family: 'Playfair Display', serif;
 }
 
-.wp-block-cover-image.has-background-dim::before {
-	background-color: transparent;
-}
-
-.wp-block-cover-image.has-background-dim::before,
-.wp-block-cover-image.has-background-dim::after {
+.wp-block-cover-image:before,
+.wp-block-cover-image:after {
 	content: '';
 	display: block;
 	width: 100%;
@@ -170,25 +171,6 @@
 	top: 0;
 	left: 0;
 }
-
-/*
-
-Not sure if need to modify the markup of the block to include an extra container element for the duotone to work correctly.
-
-.wp-block-cover-image.has-background-dim {
-	background-color: #ff7a6b;
-}
-
-.wp-block-cover-image.has-background-dim:after {
-	filter:         grayscale(100%) contrast(1) blur(0px);
-	mix-blend-mode: luminosity;
-}
-
-.wp-block-cover-image.has-background-dim:before {
-	background-color: #1c214b;
-	mix-blend-mode: lighten;
-}
-*/
 
 ul.wp-block-latest-posts.alignwide,
 ul.wp-block-latest-posts.alignfull,
@@ -316,7 +298,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 
 	.entry-content > .alignfull,
-	.page-content > .alignfull {
+	.page-content > .alignfull,
+	.entry-content > .wp-block-cover-image-wrapper,
+	.page-content > .wp-block-cover-image-wrapper {
 		left: -20vw;
 	}
 }
@@ -354,7 +338,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 
 	.entry-content > .alignfull,
-	.page-content > .alignfull {
+	.page-content > .alignfull,
+	.entry-content > .wp-block-cover-image-wrapper,
+	.page-content > .wp-block-cover-image-wrapper {
 		left: -330px;
 	}
 }
