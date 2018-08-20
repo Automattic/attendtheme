@@ -1571,11 +1571,10 @@ h2.comments-title {
 --------------------------------------------------------------*/
 
 .wp-block-image,
+.wp-block-cover-image-wrapper,
 .blocks-gallery-item figure,
 .comment-meta .comment-author .comment-author-avatar {
 	background-color: #ff7a6b;
-	display:          flex;
-	flex:             1 1 100%;
 	height:           100%;
 	overflow:         hidden;
 	padding:          0px;
@@ -1583,10 +1582,10 @@ h2.comments-title {
 }
 
 .wp-block-image img,
+.wp-block-cover-image-wrapper .has-background-dim,
 .blocks-gallery-item figure img,
 .comment-meta .comment-author .comment-author-avatar img {
 	filter:         grayscale(100%) contrast(1) blur(0px);
-	flex:           1 0 100%;
 	height:         100%;
 	max-width:      100%;
 	mix-blend-mode: luminosity;
@@ -1597,6 +1596,7 @@ h2.comments-title {
 }
 
 .wp-block-image:before,
+.wp-block-cover-image-wrapper:before,
 .blocks-gallery-item figure:before,
 .comment-meta .comment-author .comment-author-avatar:before {
 	background-color: #1c214b;
