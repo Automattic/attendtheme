@@ -635,6 +635,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 
 .site-header-wrap {
+	display: flex;
 	padding: 0;
 	width: 100%;
 }
@@ -642,8 +643,6 @@ a:hover, a:active {
 .site-branding {
 	margin: 1rem 1rem 1rem 2rem;
 	width: auto;
-	float: left;
-	display: inline-block;
 }
 
 .js .site-header-wrap .main-navigation {
@@ -657,11 +656,12 @@ a:hover, a:active {
 }
 
 .main-navigation {
-	display: inline-block;
+	clear: both;
+	display: block;
 	float: right;
 	padding: 2rem 0;
-	max-width: 77%;
 	margin: 0 2rem 0 1rem;
+	width: 100%;
 }
 
 .main-navigation > div {
