@@ -46,7 +46,7 @@
 }
 
 .wp-block-video video {
-	max-width: 770px;
+	max-width: 624px;
 }
 
 .wp-block-image {
@@ -312,18 +312,18 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		left: 330px;
 		position: relative;
 		padding: 0;
-		max-width: 770px;
+		max-width: 624px;
 	}
 
 	.entry-content > *,
 	.page-content > * {
-		max-width: 770px;
+		max-width: 624px;
 	}
 
 	.entry-content > .alignwide {
 		max-width: 100vw;
 		margin-left: 0;
-		margin-right: calc(-100vw + 770px + 330px);
+		margin-right: calc(-100vw + 624px + 330px);
 		padding: 0;
 		left: 0;
 	}

@@ -1081,7 +1081,7 @@ img.alignright {
 @media screen and (min-width: 1136px) {
 	.alignleft,
 	.alignright {
-		max-width: 770px !important;	/* Let's work to make this !important unnecessary */
+		max-width: 624px !important;	/* Let's work to make this !important unnecessary */
 	}
 }
 
@@ -1299,7 +1299,7 @@ img.alignright {
 	.posts-navigation,
 	.page-navigation {
 		left: 330px;
-		max-width: 770px;
+		max-width: 624px;
 		padding-left: 0;
 		padding-right: 0;
 		position: relative;
