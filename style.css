@@ -45,6 +45,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 ----------------------------------------------------------------
 # Normalize
 # Typography
+# Color variables
 # Elements
 # Forms
 # Navigation
@@ -166,7 +167,7 @@ h6 {
 
 mark {
 	background: #ff0;
-	color: #000;
+	color: var(--color_background);
 }
 
 small {
@@ -223,7 +224,7 @@ input,
 optgroup,
 select,
 textarea {
-	background: #a6d8ef;
+	background: var(--color_primary);
 	color: inherit;
 	font: inherit;
 	margin: 0;
@@ -278,7 +279,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 fieldset {
-	border: 1px solid #c0c0c0;
+	border: 1px solid var(--color_primary);
 	margin: 0 2px;
 	padding: 0.35em 0.625em 0.75em;
 }
@@ -315,7 +316,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #a6d8ef;
+	color: var(--color_primary);
 	font-family: 'Lato', sans-serif;
 	font-size: 18px;
 	font-size: 1.125rem;
@@ -324,13 +325,13 @@ textarea {
 }
 
 body *::selection {
-	background: rgba(255, 122, 107, 0.996);
-	color: #1c214b;
+	background: var(--color_action);
+	color: var(--color_background);
 }
 
 body *::-moz-selection {
-	background: #ff7a6b;
-	color: #1c214b;
+	background: var(--color_action);
+	color: var(--color_background);
 }
 
 h1,
@@ -339,7 +340,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: #fff;
+	color: var(--color_secondary);
 	clear: both;
 	font-family: 'Playfair Display', serif;
 }
@@ -353,7 +354,7 @@ p {
 }
 
 .entry-header .entry-title a {
-	color: #ff7a6b;
+	color: var(--color_action);
 	text-decoration: none;
 }
 
@@ -394,14 +395,14 @@ var {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted var(--color_primary);
 	cursor: help;
 }
 
 mark,
 ins {
-	background: #ff7a6b;
-	color: #1c214b;
+	background: var(--color_action);
+	color: var(--color_background);
 	text-decoration: none;
 }
 
@@ -411,7 +412,7 @@ big {
 
 .site-header {
 	align-items: center;
-	border-bottom: 1px solid #a6d8ef;
+	border-bottom: 1px solid var(--color_primary);
 	display: flex;
 	justify-content: space-between;
 }
@@ -438,8 +439,18 @@ big {
 	font-weight: inherit;
 	line-height: 1.4;
 	word-wrap: break-word;
-	color: #fff;
+	color: var(--color_secondary);
 }
+/*--------------------------------------------------------------
+# Color variables
+--------------------------------------------------------------*/
+:root {
+  --color_background: #1c214b; /* Background */
+  --color_primary:    #a6d8ef; /* Text, form fields */
+  --color_secondary:  #ffffff; /* Headings */
+  --color_action:     #ff7a6b; /* Links, buttons, duotones */
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -455,7 +466,7 @@ html {
 }
 
 body {
-	background: #1c214b;
+	background: var(--color_background);
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -527,9 +538,9 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	color: #000000;
+	color: var(--color_background);
 	padding: 0.8rem 2rem;
-	background-color: #ff7a6b;
+	background-color: var(--color_action);
 	border: none;
 	border-radius: 3px;
 	font-size: 100%;
@@ -571,7 +582,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #1c214b;
+	color: var(--color_background);
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
@@ -611,15 +622,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #ff7a6b;
+	color: var(--color_action);
 }
 
 a:visited {
-	color: #ff7a6b;
+	color: var(--color_action);
 }
 
 a:hover, a:focus, a:active {
-	color: #ff7a6b;
+	color: var(--color_action);
 }
 
 a:focus {
@@ -733,14 +744,14 @@ a:hover, a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-	color: #ff7a6b;
+	color: var(--color_action);
 }
 
 .main-navigation ul ul .current_page_item > a,
 .main-navigation ul ul .current-menu-item > a,
 .main-navigation ul ul .current_page_ancestor > a,
 .main-navigation ul ul .current-menu-ancestor > a {
-	color: #fff;
+	color: var(--color_secondary);
 	text-decoration: underline;
 }
 
@@ -774,50 +785,50 @@ a:hover, a:active {
 
 .main-navigation a,
 .main-navigation .dropdown-toggle {
-	color: #a6d8ef;
+	color: var(--color_primary);
 }
 
 .white .main-navigation a,
 .white .main-navigation .dropdown-toggle {
-	color: #000;
+	color: var(--color_background);
 }
 
 .black .main-navigation a,
 .black .main-navigation .dropdown-toggle {
-	color: #a6d8ef;
+	color: var(--color_primary);
 }
 
 .main-navigation .dropdown-toggle:focus .icon,
 .main-navigation .dropdown-toggle:hover .icon {
-	background-color: #a6d8ef;
-	color: #000;
+	background-color: var(--color_primary);
+	color: var(--color_background);
 }
 
 .white .main-navigation .dropdown-toggle:focus .icon,
 .white .main-navigation .dropdown-toggle:hover .icon {
-	background-color: #000;
-	color: #a6d8ef;
+	background-color: var(--color_background);
+	color: var(--color_primary);
 }
 
 .black .main-navigation .dropdown-toggle:focus .icon,
 .black .main-navigation .dropdown-toggle:hover .icon {
-	color: #000;
+	color: var(--color_background);
 }
 
 .main-navigation ul ul {
-	background: #000;
+	background: var(--color_background);
 }
 
 .main-navigation ul ul a {
-	color: #a6d8ef;
+	color: var(--color_primary);
 }
 
 .white .main-navigation ul ul {
-	background: #a6d8ef;
+	background: var(--color_primary);
 }
 
 .white .main-navigation ul ul a {
-	color: #000;
+	color: var(--color_background);
 }
 
 .grey .main-navigation ul ul {
@@ -825,15 +836,15 @@ a:hover, a:active {
 }
 
 .grey .main-navigation ul ul a {
-	color: #a6d8ef;
+	color: var(--color_primary);
 }
 
 .black .main-navigation ul ul {
-	background: #000;
+	background: var(--color_background);
 }
 
 .black .main-navigation ul ul a {
-	color: #a6d8ef;
+	color: var(--color_primary);
 }
 
 /* Hide more link unless we need it. */
@@ -939,27 +950,27 @@ a:hover, a:active {
 	}
 
 	.main-navigation a,.main-navigation .dropdown-toggle {
-		color: #a6d8ef;
+		color: var(--color_primary);
 	}
 
 	.main-navigation ul ul {
-		background: #ff7a6b;
+		background: var(--color_action);
 	}
 
 	.main-navigation ul ul a,.main-navigation ul ul .dropdown-toggle {
-		color: #fff;
+		color: var(--color_secondary);
 	}
 
 	.white .main-navigation ul ul {
-		background: #000;
+		background: var(--color_background);
 	}
 
 	.white .main-navigation ul ul a,.white .main-navigation ul ul .dropdown-toggle {
-		color: #fff;
+		color: var(--color_secondary);
 	}
 
 	.grey .main-navigation ul ul {
-		background: #fff;
+		background: var(--color_secondary);
 	}
 
 	.grey .main-navigation ul ul a,.grey .main-navigation ul ul .dropdown-toggle {
@@ -967,11 +978,11 @@ a:hover, a:active {
 	}
 
 	.black .main-navigation ul ul {
-		background: #fff;
+		background: var(--color_secondary);
 	}
 
 	.black .main-navigation ul ul a,.black .main-navigation ul ul .dropdown-toggle {
-		color: #000;
+		color: var(--color_background);
 	}
 }
 
@@ -993,11 +1004,11 @@ a:hover, a:active {
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
+	background-color: var(--color_action);
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	color: #21759b;
+	color: var(--color_background);
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -1179,7 +1190,7 @@ img.alignright {
 .posts-navigation:before,
 .page-navigation:before {
 	content: '';
-	border-top: 1px solid #a6d8ef;
+	border-top: 1px solid var(--color_primary);
 	display: block;
 	position: relative;
 	margin-left: -2rem;
@@ -1189,7 +1200,7 @@ img.alignright {
 .posts-navigation:after,
 .page-navigation:after {
 	content: '';
-	border-bottom: 1px solid #a6d8ef;
+	border-bottom: 1px solid var(--color_primary);
 	display: block;
 	position: relative;
 	margin-left: -2rem;
@@ -1238,7 +1249,7 @@ img.alignright {
 }
 
 .entry-footer {
-	color: #a6d8ef;
+	color: var(--color_primary);
 	font-size: 1em;
 	font-style: italic;
 	border: 0;
@@ -1273,7 +1284,7 @@ img.alignright {
 	.post-navigation:before,
 	.posts-navigation:before,
 	.page-navigation:before {
-		border-top: 1px solid #a6d8ef;
+		border-top: 1px solid var(--color_primary);
 		display: block;
 		margin-left: calc(-25% - 0.5rem);
 	}
@@ -1281,7 +1292,7 @@ img.alignright {
 	.post-navigation:after,
 	.posts-navigation:after,
 	.page-navigation:after {
-		border-bottom: 1px solid #a6d8ef;
+		border-bottom: 1px solid var(--color_primary);
 		display: block;
 		margin-left: calc(-25% - 0.5rem);
 	}
@@ -1354,7 +1365,7 @@ h2.comments-title {
 .comment-reply-link:focus,
 .comment-reply-link:active,
 .comment-reply-link:visited {
-	color: #000000;
+	color: var(--color_background);
 }
 
 #comments li.comment.depth-1 {
@@ -1363,7 +1374,7 @@ h2.comments-title {
 
 #comments .comment-list > li.comment:after {
 	content: '';
-	border-bottom: 1px solid #a6d8ef;
+	border-bottom: 1px solid var(--color_primary);
 	display: block;
 	position: relative;
 	margin-left: -2rem;
@@ -1420,11 +1431,11 @@ h2.comments-title {
 }
 
 .comment-reply-link {
-	background-color: #ff7a6b;
+	background-color: var(--color_action);
 	border-radius: 3px;
 	border: none;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
-	color: #000000;
+	color: var(--color_background);
 	display: inline-block;
 	font-size: 0.750rem;
 	font-weight: 400;
@@ -1441,13 +1452,13 @@ h2.comments-title {
 }
 
 #cancel-comment-reply-link {
-	background-color: #ff7a6b;
+	background-color: var(--color_action);
 	border-radius: 3px;
 	border: none;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 	display: inline-block;
 	margin-top: 2rem;
-	color: #000000;
+	color: var(--color_background);
 	font-size: 0.750rem;
 	font-weight: 400;
 	font-family: 'Lato', sans-serif;
@@ -1471,7 +1482,7 @@ h2.comments-title {
 }
 
 .comment-metadata a {
-	color: #a6d8ef;
+	color: var(--color_primary);
 }
 
 .comment-edit-link {
@@ -1579,7 +1590,7 @@ h2.comments-title {
 .wp-block-cover-image-wrapper,
 .blocks-gallery-item figure,
 .comment-meta .comment-author .comment-author-avatar {
-	background-color: #ff7a6b;
+	background-color: var(--color_action);
 	height:           100%;
 	overflow:         hidden;
 	padding:          0px;
@@ -1604,7 +1615,7 @@ h2.comments-title {
 .wp-block-cover-image-wrapper:before,
 .blocks-gallery-item figure:before,
 .comment-meta .comment-author .comment-author-avatar:before {
-	background-color: #1c214b;
+	background-color: var(--color_background);
 	bottom:         0;
 	content:        '';
 	height:         100%;
