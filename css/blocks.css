@@ -153,13 +153,18 @@
 }
 
 .wp-block-cover-image {
+	justify-content: flex-start;
 	margin: 0;
 }
 
 .wp-block-cover-image .wp-block-cover-image-text,
 .wp-block-cover-image h2 {
 	font-family: 'Playfair Display', serif;
+	padding: 0 2rem;
+	text-align: left;
 }
+
+@media()
 
 .wp-block-cover-image:before,
 .wp-block-cover-image:after {
@@ -282,7 +287,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 @media screen and (min-width: 740px) {
 
 	.entry-content,
-	.page-content {
+	.page-content,
+	.wp-block-cover-image .wp-block-cover-image-text, 
+	.wp-block-cover-image h2 {
 		left: 20%;
 		position: relative;
 		padding: 0;
@@ -311,7 +318,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 @media screen and (min-width: 1136px) {
 
 	.entry-content,
-	.page-content {
+	.page-content,
+	.wp-block-cover-image .wp-block-cover-image-text, 
+	.wp-block-cover-image h2 {
 		left: 330px;
 		position: relative;
 		padding: 0;
