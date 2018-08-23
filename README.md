@@ -1,8 +1,8 @@
-# Gutenberg theme
-This theme is designed to showcase what Gutenberg can do with regards to themes. It is intended as a work in progress, at least until v1 of the new editor (and maybe beyond).
+# Attend theme
+This theme is built with meetups, conferences, and events in mind. It is Gutenberg-ready and prefers using Gutenberg blocks.
 
 # Block focused
 If something isn't a block yet, this theme will not have it. As each block happens, the theme will gain that functionality.
 
-# Styling just like Gutenberg
-The idea of the default look for this theme is to as closely replicate that of the Gutenberg editor output as possible. As a result the focus is on that styling not creating a new look.. yet. As things grow, we may have styles and go further into what the theme can have... who knows.
+# Design focused
+Events and conferences are meant to leave behind great memories. This theme will do that too! Attend is a theme that doesn't play it safe. It's bold, fun, and adventurous. 
