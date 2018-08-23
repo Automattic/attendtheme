@@ -635,7 +635,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 
 .site-header-wrap {
-	display: flex;
+	display: block;
 	padding: 0;
 	width: 100%;
 }
@@ -658,14 +658,16 @@ a:hover, a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: right;
-	padding: 2rem 0;
-	margin: 0 2rem 0 1rem;
-	width: 100%;
+	float: left;
+	padding: 0;
+	margin: 0 2rem;
+	width: calc(100% - 4rem);
 }
 
 .main-navigation > div {
-	float: right;
+	float: none;
+	display: inline-block;
+	margin: 0 auto;
 }
 
 .main-navigation.toggled ul {
@@ -708,6 +710,8 @@ a:hover, a:active {
 	right: 0;
 	width: 100vw;
 	opacity: 1;
+	margin-top: 1rem;
+	padding-bottom: 2rem;
 }
 
 .main-navigation li {
@@ -805,11 +809,11 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul {
-	background: #000;
+	background: #ff7a6b;
 }
 
 .main-navigation ul ul a {
-	color: #a6d8ef;
+	color: #fff;
 }
 
 .white .main-navigation ul ul {
@@ -883,6 +887,27 @@ a:hover, a:active {
 }
 
 @media screen and (min-width: 37.5em) {
+	.site-header-wrap {
+		display: flex;
+	}
+
+	.main-navigation {
+		clear: both;
+		display: block;
+		float: right;
+		padding: 2rem 0;
+		margin: 0 2rem 0 1rem;
+		width: 100%;
+	}
+
+	.main-navigation > div {
+		float: right;
+	}
+
+	.main-navigation ul li.toggled-on > ul {
+		padding-bottom: 0;
+	}
+
 	.menu-toggle {
 		display: none;
 	}
