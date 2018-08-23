@@ -820,12 +820,11 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul {
-  background: var(--color_background);
+	background: var(--color_background);
 }
 
 .main-navigation ul ul a {
 	color: var(--color_primary);
-	background: #ff7a6b;
 }
 
 .white .main-navigation ul ul {
