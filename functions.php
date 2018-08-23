@@ -154,7 +154,7 @@ function attend_fonts_url() {
 		}
 
 		if ( 'off' !== $lato ) {
-			$font_families[] = 'Lato:400,400i,700,700i';
+			$font_families[] = 'Lato:300,300i,400,400i,700,700i';
 		}
 
 		$query_args = array(
