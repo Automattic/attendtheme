@@ -242,4 +242,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 // Add Custom Blocks
-require get_template_directory() . '/inc/blocks.php';
+require get_template_directory() . '/inc/gutenberg/gutenberg.php';
