@@ -89,24 +89,24 @@ if ( ! function_exists( 'attend_setup' ) ) :
 		// Add support for custom color scheme.
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name'  => 'strong blue',
-				'slug'  => 'strong-blue',
-				'color' => '#0073aa',
+				'name'  => 'Dark Blue',
+				'slug'  => 'dark-blue',
+				'color' => '#1c214b',
 			),
 			array(
-				'name'  => 'lighter blue',
-				'slug'  => 'lighter-blue',
-				'color' => '#229fd8',
+				'name'  => 'Light Blue',
+				'slug'  => 'light-blue',
+				'color' => '#a6d8ef',
 			),
 			array(
-				'name'  => 'very light gray',
-				'slug'  => 'very-light-gray',
-				'color' => '#eee',
+				'name'  => 'White',
+				'slug'  => 'white',
+				'color' => '#ffffff',
 			),
 			array(
-				'name'  => 'very dark gray',
-				'slug'  => 'very-dark-gray',
-				'color' => '#444',
+				'name'  => 'Salmon',
+				'slug'  => 'salmon',
+				'color' => '#ff7a6b',
 			)
 		) );
 
