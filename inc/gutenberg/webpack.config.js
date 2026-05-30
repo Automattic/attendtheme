@@ -22,7 +22,8 @@ const extractConfig = {
     },
     {
       loader: 'sass-loader',
-      query: {
+      options: {
+        implementation: require( 'sass' ),
         outputStyle:
           'production' === process.env.NODE_ENV ? 'compressed' : 'expanded',
       },
@@ -40,7 +41,7 @@ module.exports = {
     path: path.resolve( __dirname ),
     filename: '[name].js',
   },
-  watch: true,
+  watch: 'production' !== process.env.NODE_ENV,
   devtool: 'cheap-eval-source-map',
   module: {
     rules: [
